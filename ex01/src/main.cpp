@@ -14,7 +14,6 @@
 #include "iter.hpp"
 #include <iostream>
 #include <string>
-#include <cstddef> // unsigned int ( size_t )
 
 
 template <typename T> void printElements( T& element );
@@ -31,7 +30,7 @@ int main( int argc, char** argv )
   std::cout << "-- Int --" << std::endl << std::endl;
 
   int intArray[] = {1, 2, 3, 4};
-  size_t intArrayLength = 4;
+  unsigned int intArrayLength = 4;
 
   iter( intArray, intArrayLength, ::printElements );
 
@@ -44,7 +43,7 @@ int main( int argc, char** argv )
   std::cout << std::endl << "-- String --" << std::endl << std::endl;
 
   std::string stringArray[] = {"first", "second", "third"};
-  size_t stringArrayLength = 3;
+  unsigned int stringArrayLength = 3;
 
   iter( stringArray, stringArrayLength, ::printElements );
 
